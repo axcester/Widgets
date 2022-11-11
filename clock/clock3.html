@@ -1,0 +1,66 @@
+<style type="text/css">
+  * {
+    font-family: Helvetica, serif;
+    color: white;
+    font-size: 8.2vw;
+    overflow: hidden;
+  }
+
+  .clock {
+    font-size: 25vw;
+    /*letter-spacing: -0.4rem;*/
+    /*font-family: Monaco, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;*/
+  }
+
+  .center {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .center div {
+    width: 100%;
+    background: rgba(0, 0, 0, 0)
+  }
+</style>
+
+ <div class="center">
+    <div>
+      <div id="clock" class="clock">Miðvikudagur, 20. September 16:41:19</div>
+      <div id="date" class="date">Miðvikudagur, 20. September</div>
+    </div>
+  </div>
+
+<script type="text/javascript">
+var tday=["Sunnudagur","Mánudagur","Þriðjudagur","Miðvikudagur","Fimmtudagur","Föstudagur","Laugardagur"];
+var tmonth=["janúar","febrúar","mars","apríl","maí","júní","júlí","ágúst","september","október","nóvember","desember"];
+
+function GetClock() {
+  var d = new Date();
+  var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate();
+  var nhour = d.getHours(), nmin = d.getMinutes(), nsec = d.getSeconds();
+  if (nmin<=9) nmin = "0" + nmin;
+  if (nsec<=9) nsec = "0" + nsec;
+
+  var clocktext = nhour + ":" + nmin + ":" + nsec;
+  var datetext = tday[nday] + ", " + ndate + ". "+ tmonth[nmonth];
+  document.getElementById('clock').innerHTML = clocktext;
+  document.getElementById('date').innerHTML = datetext;
+}
+
+GetClock();
+setInterval(GetClock,1000);
+</script><html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
+<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
+<mso:TaxCatchAll msdt:dt="string"></mso:TaxCatchAll>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
