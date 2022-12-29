@@ -472,7 +472,7 @@
         }
       },
       "wssDeviceSpec": {},
-      "lastModifiedTime": "2022-09-23T15:36:59.064Z"
+      "lastModifiedTime": "2022-11-18T16:26:16.094Z"
     },
     "zones": {
       "zonesById": {
@@ -484,10 +484,10 @@
           "nonInteractive": true,
           "initialMediaStateId": "ec2f505f-95eb-4231-baa8-5b3e5545b561",
           "position": {
-            "width": 400,
-            "height": 200,
-            "x": 100,
-            "y": 100,
+            "width": 500,
+            "height": 364.1565145582,
+            "x": 1400,
+            "y": 20,
             "pct": false
           },
           "properties": {
@@ -497,15 +497,33 @@
         "220aa10c-ce72-40ce-891d-20884d9ad698": {
           "id": "220aa10c-ce72-40ce-891d-20884d9ad698",
           "name": "Zone 2",
+          "type": "Images",
+          "tag": "Images1",
+          "nonInteractive": true,
+          "initialMediaStateId": "15b99c80-228f-4ea2-9a32-de3632f6a1c9",
+          "position": {
+            "width": 500,
+            "height": 500,
+            "x": 1400,
+            "y": 400,
+            "pct": false
+          },
+          "properties": {
+            "imageMode": "Scale to Fit"
+          }
+        },
+        "c5429ab7-b107-4ee1-9f64-6f3acec66564": {
+          "id": "c5429ab7-b107-4ee1-9f64-6f3acec66564",
+          "name": "Zone 3",
           "type": "VideoOrImages",
           "tag": "VideoOrImages0",
           "nonInteractive": true,
-          "initialMediaStateId": "5b1928cb-087a-4b86-ba4a-698c95e4a0a2",
+          "initialMediaStateId": "52a9a32e-4f6d-4507-b195-0f45e497a78e",
           "position": {
-            "width": 1920,
-            "height": 1080,
-            "x": 0,
-            "y": 0,
+            "width": 1370,
+            "height": 1040,
+            "x": 20,
+            "y": 20,
             "pct": false
           },
           "properties": {
@@ -545,7 +563,7 @@
               "usb_5": "None",
               "usb_6": "None",
               "hdmi": "Pcm",
-              "spdif": "Passthrough"
+              "spdif": "None"
             },
             "audioMixMode": "Stereo",
             "audioVolume": 100,
@@ -557,7 +575,8 @@
       },
       "allZones": [
         "7c099aa1-04ac-4110-b512-64ba0db9eea8",
-        "220aa10c-ce72-40ce-891d-20884d9ad698"
+        "220aa10c-ce72-40ce-891d-20884d9ad698",
+        "c5429ab7-b107-4ee1-9f64-6f3acec66564"
       ],
       "zoneLayersById": {
         "f101633a-1be2-44b7-a077-7f6f173e8fd5": {
@@ -565,7 +584,8 @@
           "type": "Graphics",
           "zoneSequence": [
             "7c099aa1-04ac-4110-b512-64ba0db9eea8",
-            "220aa10c-ce72-40ce-891d-20884d9ad698"
+            "220aa10c-ce72-40ce-891d-20884d9ad698",
+            "c5429ab7-b107-4ee1-9f64-6f3acec66564"
           ]
         },
         "87d70efa-80f9-42a6-b4c7-58707228e3ea": {
@@ -582,7 +602,7 @@
           "id": "11368886-d256-4fbc-b6a9-e0394ea3f590",
           "type": "Video",
           "zoneSequence": [
-            "220aa10c-ce72-40ce-891d-20884d9ad698"
+            "c5429ab7-b107-4ee1-9f64-6f3acec66564"
           ],
           "zoneLayerSpecificProperties": {
             "type": "HD",
@@ -598,7 +618,8 @@
       ],
       "zoneTagIndices": {
         "7c099aa1-04ac-4110-b512-64ba0db9eea8": 2,
-        "220aa10c-ce72-40ce-891d-20884d9ad698": 9
+        "220aa10c-ce72-40ce-891d-20884d9ad698": 10,
+        "c5429ab7-b107-4ee1-9f64-6f3acec66564": 3
       }
     },
     "mediaStates": {
@@ -615,8 +636,8 @@
             "name": "HTML 5",
             "type": "Html",
             "siteId": "1a598e7f-6efd-4751-8ac1-815b0dafc612",
-            "enableBrightSignJavascriptObjects": true,
-            "enableCrossDomainPolicyChecks": false,
+            "enableBrightSignJavascriptObjects": false,
+            "enableCrossDomainPolicyChecks": true,
             "ignoreHttpsCertificateErrors": false,
             "enableCamera": false,
             "enableMouseEvents": true,
@@ -627,112 +648,45 @@
             "enableHtmlURLSharedStorage": false
           }
         },
-        "5b1928cb-087a-4b86-ba4a-698c95e4a0a2": {
-          "id": "5b1928cb-087a-4b86-ba4a-698c95e4a0a2",
-          "name": "1434894199159.png",
-          "tag": "3",
+        "15b99c80-228f-4ea2-9a32-de3632f6a1c9": {
+          "id": "15b99c80-228f-4ea2-9a32-de3632f6a1c9",
+          "name": "HTML 5",
+          "tag": "9",
           "container": {
             "id": "220aa10c-ce72-40ce-891d-20884d9ad698",
             "type": 0
           },
           "contentItem": {
-            "name": "1434894199159.png",
-            "type": "Image",
-            "assetId": "26266cd9-f553-46cc-ba6c-b213096a116c",
-            "useImageBuffer": false,
-            "videoPlayerRequired": false,
-            "defaultTransition": "No effect",
-            "transitionDuration": 1
+            "name": "HTML 5",
+            "type": "Html",
+            "siteId": "b45b4a23-5d61-4733-954f-cc5afc7fae9a",
+            "enableBrightSignJavascriptObjects": false,
+            "enableCrossDomainPolicyChecks": true,
+            "ignoreHttpsCertificateErrors": false,
+            "enableCamera": false,
+            "enableMouseEvents": false,
+            "displayCursor": false,
+            "hwzOn": false,
+            "useUserStylesheet": false,
+            "enableFileURLSharedStorage": true,
+            "enableHtmlURLSharedStorage": false
           }
         },
-        "ea042f7b-3207-42ed-959b-15b321a8f6ac": {
-          "id": "ea042f7b-3207-42ed-959b-15b321a8f6ac",
-          "name": "1434894262167.png",
-          "tag": "4",
+        "52a9a32e-4f6d-4507-b195-0f45e497a78e": {
+          "id": "52a9a32e-4f6d-4507-b195-0f45e497a78e",
+          "name": "pacific.rim.mp4",
+          "tag": "2",
           "container": {
-            "id": "220aa10c-ce72-40ce-891d-20884d9ad698",
+            "id": "c5429ab7-b107-4ee1-9f64-6f3acec66564",
             "type": 0
           },
           "contentItem": {
-            "name": "1434894262167.png",
-            "type": "Image",
-            "assetId": "b2f624b8-11e0-4079-8445-7e447aa69c36",
-            "useImageBuffer": false,
-            "videoPlayerRequired": false,
-            "defaultTransition": "No effect",
-            "transitionDuration": 1
-          }
-        },
-        "f438b33e-1964-4509-ad57-3736a8749f86": {
-          "id": "f438b33e-1964-4509-ad57-3736a8749f86",
-          "name": "1434894086222.png",
-          "tag": "5",
-          "container": {
-            "id": "220aa10c-ce72-40ce-891d-20884d9ad698",
-            "type": 0
-          },
-          "contentItem": {
-            "name": "1434894086222.png",
-            "type": "Image",
-            "assetId": "83032208-0956-49d0-993d-03464e486696",
-            "useImageBuffer": false,
-            "videoPlayerRequired": false,
-            "defaultTransition": "No effect",
-            "transitionDuration": 1
-          }
-        },
-        "3d7c6058-b266-4607-a9a6-70856c95781c": {
-          "id": "3d7c6058-b266-4607-a9a6-70856c95781c",
-          "name": "1434893994577.png",
-          "tag": "6",
-          "container": {
-            "id": "220aa10c-ce72-40ce-891d-20884d9ad698",
-            "type": 0
-          },
-          "contentItem": {
-            "name": "1434893994577.png",
-            "type": "Image",
-            "assetId": "71162a8b-e71c-47f2-ac3c-87f7a751d00c",
-            "useImageBuffer": false,
-            "videoPlayerRequired": false,
-            "defaultTransition": "No effect",
-            "transitionDuration": 1
-          }
-        },
-        "5bc022a5-c474-45f7-b504-8f7e9e27adbc": {
-          "id": "5bc022a5-c474-45f7-b504-8f7e9e27adbc",
-          "name": "1434893921479.png",
-          "tag": "7",
-          "container": {
-            "id": "220aa10c-ce72-40ce-891d-20884d9ad698",
-            "type": 0
-          },
-          "contentItem": {
-            "name": "1434893921479.png",
-            "type": "Image",
-            "assetId": "f89c3c20-c6bb-4fae-8515-eab33b8cd369",
-            "useImageBuffer": false,
-            "videoPlayerRequired": false,
-            "defaultTransition": "No effect",
-            "transitionDuration": 1
-          }
-        },
-        "f1977cf8-10c6-49c3-921e-58853ecc6fcd": {
-          "id": "f1977cf8-10c6-49c3-921e-58853ecc6fcd",
-          "name": "1434894636463.png",
-          "tag": "8",
-          "container": {
-            "id": "220aa10c-ce72-40ce-891d-20884d9ad698",
-            "type": 0
-          },
-          "contentItem": {
-            "name": "1434894636463.png",
-            "type": "Image",
-            "assetId": "54f7748d-6143-4f44-89a4-ffe27bef61f2",
-            "useImageBuffer": false,
-            "videoPlayerRequired": false,
-            "defaultTransition": "No effect",
-            "transitionDuration": 1
+            "name": "pacific.rim.mp4",
+            "type": "Video",
+            "assetId": "66fb0b74-801a-4025-94ac-049a6ec5f6d5",
+            "volume": 100,
+            "videoDisplayMode": "2D",
+            "automaticallyLoop": true
           }
         }
       },
@@ -749,65 +703,23 @@
           "interval": 0
         }
       },
-      "b5f7306e-c908-4cf1-a1be-e407ba7771e8": {
-        "id": "b5f7306e-c908-4cf1-a1be-e407ba7771e8",
-        "name": "1434894199159.png_ev",
+      "8558a4f3-c965-423d-9a43-bce94907727a": {
+        "id": "8558a4f3-c965-423d-9a43-bce94907727a",
+        "name": "HTML 5_ev",
         "type": "Timer",
-        "mediaStateId": "5b1928cb-087a-4b86-ba4a-698c95e4a0a2",
-        "disabled": false,
+        "mediaStateId": "15b99c80-228f-4ea2-9a32-de3632f6a1c9",
+        "disabled": true,
         "data": {
-          "interval": 6
+          "interval": 0
         }
       },
-      "84330ea5-e0b9-467b-890b-9972ac604de8": {
-        "id": "84330ea5-e0b9-467b-890b-9972ac604de8",
-        "name": "1434894262167.png_ev",
-        "type": "Timer",
-        "mediaStateId": "ea042f7b-3207-42ed-959b-15b321a8f6ac",
-        "disabled": false,
-        "data": {
-          "interval": 6
-        }
-      },
-      "3305202e-7f1c-45fc-b5a1-3ab77496414b": {
-        "id": "3305202e-7f1c-45fc-b5a1-3ab77496414b",
-        "name": "1434894086222.png_ev",
-        "type": "Timer",
-        "mediaStateId": "f438b33e-1964-4509-ad57-3736a8749f86",
-        "disabled": false,
-        "data": {
-          "interval": 6
-        }
-      },
-      "6b046322-e68e-4fa7-bfca-6535add86dcb": {
-        "id": "6b046322-e68e-4fa7-bfca-6535add86dcb",
-        "name": "1434893994577.png_ev",
-        "type": "Timer",
-        "mediaStateId": "3d7c6058-b266-4607-a9a6-70856c95781c",
-        "disabled": false,
-        "data": {
-          "interval": 6
-        }
-      },
-      "b9e91aa0-1aeb-4f85-922b-1e9fab7be08e": {
-        "id": "b9e91aa0-1aeb-4f85-922b-1e9fab7be08e",
-        "name": "1434893921479.png_ev",
-        "type": "Timer",
-        "mediaStateId": "5bc022a5-c474-45f7-b504-8f7e9e27adbc",
-        "disabled": false,
-        "data": {
-          "interval": 6
-        }
-      },
-      "a337b9cc-e46f-41a0-a582-3fed53ca5434": {
-        "id": "a337b9cc-e46f-41a0-a582-3fed53ca5434",
-        "name": "1434894636463.png_ev",
-        "type": "Timer",
-        "mediaStateId": "f1977cf8-10c6-49c3-921e-58853ecc6fcd",
-        "disabled": false,
-        "data": {
-          "interval": 6
-        }
+      "244af5b8-da99-4ff5-b0d5-967f94f75ca0": {
+        "id": "244af5b8-da99-4ff5-b0d5-967f94f75ca0",
+        "name": "pacific.rim.mp4_ev",
+        "type": "MediaEnd",
+        "mediaStateId": "52a9a32e-4f6d-4507-b195-0f45e497a78e",
+        "disabled": true,
+        "data": null
       }
     },
     "transitions": {
@@ -820,51 +732,19 @@
           "type": "No effect",
           "duration": 0
         },
-        "0275890e-f9a2-4fbd-8bd3-a4a94bd3d35b": {
-          "id": "0275890e-f9a2-4fbd-8bd3-a4a94bd3d35b",
-          "name": "1434894199159.png_tr",
-          "eventId": "b5f7306e-c908-4cf1-a1be-e407ba7771e8",
-          "targetMediaStateId": "ea042f7b-3207-42ed-959b-15b321a8f6ac",
+        "7f5b2b05-1a47-4d9d-acaa-da76d1eb7560": {
+          "id": "7f5b2b05-1a47-4d9d-acaa-da76d1eb7560",
+          "name": "HTML 5_tr",
+          "eventId": "8558a4f3-c965-423d-9a43-bce94907727a",
+          "targetMediaStateId": "15b99c80-228f-4ea2-9a32-de3632f6a1c9",
           "type": "No effect",
           "duration": 0
         },
-        "9b6b2c7f-210d-4dfb-a1ad-531ee1ba92b1": {
-          "id": "9b6b2c7f-210d-4dfb-a1ad-531ee1ba92b1",
-          "name": "1434894262167.png_tr",
-          "eventId": "84330ea5-e0b9-467b-890b-9972ac604de8",
-          "targetMediaStateId": "f438b33e-1964-4509-ad57-3736a8749f86",
-          "type": "No effect",
-          "duration": 0
-        },
-        "8093f25f-b494-41be-89be-794377ef0453": {
-          "id": "8093f25f-b494-41be-89be-794377ef0453",
-          "name": "1434894086222.png_tr",
-          "eventId": "3305202e-7f1c-45fc-b5a1-3ab77496414b",
-          "targetMediaStateId": "3d7c6058-b266-4607-a9a6-70856c95781c",
-          "type": "No effect",
-          "duration": 0
-        },
-        "e371b139-ff60-405a-a1b0-29f3f32944ff": {
-          "id": "e371b139-ff60-405a-a1b0-29f3f32944ff",
-          "name": "1434893994577.png_tr",
-          "eventId": "6b046322-e68e-4fa7-bfca-6535add86dcb",
-          "targetMediaStateId": "5bc022a5-c474-45f7-b504-8f7e9e27adbc",
-          "type": "No effect",
-          "duration": 0
-        },
-        "6bd7c117-d43c-464c-bbce-262f8a38be96": {
-          "id": "6bd7c117-d43c-464c-bbce-262f8a38be96",
-          "name": "1434893921479.png_tr",
-          "eventId": "b9e91aa0-1aeb-4f85-922b-1e9fab7be08e",
-          "targetMediaStateId": "f1977cf8-10c6-49c3-921e-58853ecc6fcd",
-          "type": "No effect",
-          "duration": 0
-        },
-        "1fa35ba8-3167-4992-8b8f-f809fb2939c7": {
-          "id": "1fa35ba8-3167-4992-8b8f-f809fb2939c7",
-          "name": "1434894636463.png_tr",
-          "eventId": "a337b9cc-e46f-41a0-a582-3fed53ca5434",
-          "targetMediaStateId": "5b1928cb-087a-4b86-ba4a-698c95e4a0a2",
+        "78128d0a-f655-49f3-93a4-0ab87448761f": {
+          "id": "78128d0a-f655-49f3-93a4-0ab87448761f",
+          "name": "pacific.rim.mp4_tr",
+          "eventId": "244af5b8-da99-4ff5-b0d5-967f94f75ca0",
+          "targetMediaStateId": "52a9a32e-4f6d-4507-b195-0f45e497a78e",
           "type": "No effect",
           "duration": 0
         }
@@ -878,13 +758,35 @@
     "htmlSites": {
       "1a598e7f-6efd-4751-8ac1-815b0dafc612": {
         "id": "1a598e7f-6efd-4751-8ac1-815b0dafc612",
-        "type": "Hosted",
+        "type": "Remote",
         "name": "HTML 5 Site",
         "queryString": {
           "params": []
         },
-        "indexAssetId": "0b53c38e-f9af-470e-978a-a6afe66c493d",
-        "enableNode": false
+        "url": {
+          "params": [
+            {
+              "type": "Text",
+              "value": "https://origo-widgets.herokuapp.com/clock/"
+            }
+          ]
+        }
+      },
+      "b45b4a23-5d61-4733-954f-cc5afc7fae9a": {
+        "id": "b45b4a23-5d61-4733-954f-cc5afc7fae9a",
+        "type": "Remote",
+        "name": "HTML 5 Site (1)",
+        "queryString": {
+          "params": []
+        },
+        "url": {
+          "params": [
+            {
+              "type": "Text",
+              "value": "https://earth.nullschool.net/#current/wind/surface/level/overlay=temp/orthographic=-23.08,62.43,3000/loc=-21.842,64.109"
+            }
+          ]
+        }
       }
     },
     "nodeApps": {},
@@ -911,129 +813,54 @@
     "partnerProducts": {},
     "customAutorun": "0",
     "assetMap": {
-      "0b53c38e-f9af-470e-978a-a6afe66c493d": {
-        "id": "0b53c38e-f9af-470e-978a-a6afe66c493d",
-        "name": "clock.html",
-        "path": "C:\\Users\\steinarg\\BrightSign\\Widgets\\",
-        "networkId": 0,
-        "location": "Local",
-        "assetType": "HtmlSite",
-        "scope": "1890f6395b99addf",
-        "locator": "file://\\C:\\Users\\steinarg\\BrightSign\\Widgets\\clock.html",
-        "fileSize": 2131,
-        "lastModifiedDate": "2022-09-23T12:05:12.284Z",
-        "refCount": 1
-      },
-      "26266cd9-f553-46cc-ba6c-b213096a116c": {
-        "id": "26266cd9-f553-46cc-ba6c-b213096a116c",
-        "name": "1434894199159.png",
-        "path": "C:\\Users\\steinarg\\Pictures\\Walls\\",
+      "66fb0b74-801a-4025-94ac-049a6ec5f6d5": {
+        "id": "66fb0b74-801a-4025-94ac-049a6ec5f6d5",
+        "name": "pacific.rim.mp4",
+        "path": "C:\\Users\\steinarg\\Videos\\",
         "networkId": 0,
         "location": "Local",
         "assetType": "Content",
         "scope": "1890f6395b99addf",
-        "locator": "file://\\C:\\Users\\steinarg\\Pictures\\Walls\\1434894199159.png",
-        "mediaType": "Image",
-        "fileSize": 954205,
-        "lastModifiedDate": "2015-10-19T12:19:48.000Z",
-        "refCount": 1
-      },
-      "b2f624b8-11e0-4079-8445-7e447aa69c36": {
-        "id": "b2f624b8-11e0-4079-8445-7e447aa69c36",
-        "name": "1434894262167.png",
-        "path": "C:\\Users\\steinarg\\Pictures\\Walls\\",
-        "networkId": 0,
-        "location": "Local",
-        "assetType": "Content",
-        "scope": "1890f6395b99addf",
-        "locator": "file://\\C:\\Users\\steinarg\\Pictures\\Walls\\1434894262167.png",
-        "mediaType": "Image",
-        "fileSize": 1355130,
-        "lastModifiedDate": "2015-10-19T12:19:49.000Z",
-        "refCount": 1
-      },
-      "83032208-0956-49d0-993d-03464e486696": {
-        "id": "83032208-0956-49d0-993d-03464e486696",
-        "name": "1434894086222.png",
-        "path": "C:\\Users\\steinarg\\Pictures\\Walls\\",
-        "networkId": 0,
-        "location": "Local",
-        "assetType": "Content",
-        "scope": "1890f6395b99addf",
-        "locator": "file://\\C:\\Users\\steinarg\\Pictures\\Walls\\1434894086222.png",
-        "mediaType": "Image",
-        "fileSize": 1322633,
-        "lastModifiedDate": "2015-10-19T12:19:55.000Z",
-        "refCount": 1
-      },
-      "71162a8b-e71c-47f2-ac3c-87f7a751d00c": {
-        "id": "71162a8b-e71c-47f2-ac3c-87f7a751d00c",
-        "name": "1434893994577.png",
-        "path": "C:\\Users\\steinarg\\Pictures\\Walls\\",
-        "networkId": 0,
-        "location": "Local",
-        "assetType": "Content",
-        "scope": "1890f6395b99addf",
-        "locator": "file://\\C:\\Users\\steinarg\\Pictures\\Walls\\1434893994577.png",
-        "mediaType": "Image",
-        "fileSize": 1317329,
-        "lastModifiedDate": "2015-10-19T12:19:43.000Z",
-        "refCount": 1
-      },
-      "f89c3c20-c6bb-4fae-8515-eab33b8cd369": {
-        "id": "f89c3c20-c6bb-4fae-8515-eab33b8cd369",
-        "name": "1434893921479.png",
-        "path": "C:\\Users\\steinarg\\Pictures\\Walls\\",
-        "networkId": 0,
-        "location": "Local",
-        "assetType": "Content",
-        "scope": "1890f6395b99addf",
-        "locator": "file://\\C:\\Users\\steinarg\\Pictures\\Walls\\1434893921479.png",
-        "mediaType": "Image",
-        "fileSize": 1358141,
-        "lastModifiedDate": "2015-10-19T12:19:43.000Z",
-        "refCount": 1
-      },
-      "54f7748d-6143-4f44-89a4-ffe27bef61f2": {
-        "id": "54f7748d-6143-4f44-89a4-ffe27bef61f2",
-        "name": "1434894636463.png",
-        "path": "C:\\Users\\steinarg\\Pictures\\Walls\\",
-        "networkId": 0,
-        "location": "Local",
-        "assetType": "Content",
-        "scope": "1890f6395b99addf",
-        "locator": "file://\\C:\\Users\\steinarg\\Pictures\\Walls\\1434894636463.png",
-        "mediaType": "Image",
-        "fileSize": 1333838,
-        "lastModifiedDate": "2015-10-19T12:19:53.000Z",
+        "locator": "file://\\C:\\Users\\steinarg\\Videos\\pacific.rim.mp4",
+        "mediaType": "Video",
+        "fileSize": 14812450572,
+        "lastModifiedDate": "2022-11-18T16:06:06.979Z",
         "refCount": 1
       }
     },
     "thumbnail": {
       "type": "image/jpeg",
-      "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCABwAMgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAgG/8QAKRABAAECAwcDBQAAAAAAAAAAAPAWKQhJVgECAwQFBhUYIiNBVFVhc//EABkBAQEBAQEBAAAAAAAAAAAAAAAEAwUGAv/EACoRAQAAAwYEBwEBAAAAAAAAAAABAgMTFGFikuIFERJzBCFBQkPBwjJR/9oADAMBAAIRAxEAPwDW4csOWDT0advYgsQXZv3fl+r+R6r+V43KcD4OU4v8dz2bn72/XaWaJVRk0TVSxnoqtWaE08008/8Ac0PKblCEIcsI/wCvmefoRzZolVFmiVUsYZXjPU17WdvgjmzRKqLNEqpYwXjPU17S3wRzZolVFmiVUsYLxnqa9pb4I5s0SqizRKqWMF4z1Ne0t8Ec2aJVRZolVLGC8Z6mvaW+CObNEqos0SqljBeM9TXtLfBHNmiVUWaJVSxgvGepr2lvgjmzRKqLNEqpYwXjPU17S3wRzZolVFmiVUsYLxnqa9pb4I5s0SqizRKqWMF4z1Ne0t8Ec2aJVRZolVLGC8Z6mvaW+COcRuHLBp6NO4cQWH3s37TxHV/I9V/K8HlOP8HN8X+2579z97PptDJomqh3eFxm6aks00ZumeMPOPOPKHJRAyaJqpYyOcmiaqWM4XiPf3J/ynr+gAlYAAAAAAAAAAAAAAAAAAAAI5yaJqoMmiaqHp+GfN3JvpfAyaJqpYyOcmiaqWM4XiPf3J/ynr+gAlYAAAAAAAAAAAAAAAAAAAAI5yaJqoMmiaqHp+GfN3JvpfAyaJqpYyOcmiaqWM4XiPf3J/ynr+gAlYAAAAAAAAAAAAAAAAAAAAI5yaJqoMmiaqHp+GfN3JvpfAyaJqpYyOcmiaqWM4XiPf3J/wAp6/oAJWAAAAAAAAAAAAAAAAAAAACOcmiaqDJomqh6fhnzdyb6XwMmiaqWMjnJomqljOF4j39yf8p6/oAJWAAAAAAAAAAAAAAAAAAAACOcmiaqDJomqh6fhnzdyb6XwMmiaqWMjnDliNwaejTt7D7iC7y+78v0jx3VfyvG5vgfPynC/jv+zf8A1t+uws0SqnHq0pozTyzST/3NHyl5wjCPLGH+M55OtYwjmzRKqLNEqpld8lTRuZ2GKxhHNmiVUWaJVRd8lTRuLDFYwjmzRKqLNEqou+Spo3FhisYRzZolVFmiVUXfJU0biwxWMI5s0SqizRKqLvkqaNxYYrGEc2aJVRZolVF3yVNG4sMVjCObNEqos0Sqi75KmjcWGKxhHNmiVUWaJVRd8lTRuLDFYwjmzRKqLNEqou+Spo3FhisYRzZolVFmiVUXfJU0biwxWMI5s0SqizRKqLvkqaNxYYmTRNVBiNxG4NPRp3Dh9w+95faeI6R47qv5Xg83x/n5vhf23/fv/rZ9Ng7vC4TdNSaaWMvVPGPnDlHlHkog/9k=",
+      "data": "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",
       "size": {
         "width": 200,
         "height": 112
       },
-      "hash": "b8d3e5c4b3cedd96ac21c63c98fa88f9c21b952f"
+      "hash": "5b7d0379b1f8722ffee0d8434222bbba0d665c82"
     }
   },
   "selection": {
     "hovered": null,
     "selectionContainer": {
-      "id": "220aa10c-ce72-40ce-891d-20884d9ad698",
-      "type": "ZONE",
-      "selectableType": "ZONE"
+      "id": "PRESENTATION",
+      "type": "PRESENTATION",
+      "selectableType": "PRESENTATION"
     },
     "selectionEntities": {
-      "f1977cf8-10c6-49c3-921e-58853ecc6fcd": {
-        "id": "f1977cf8-10c6-49c3-921e-58853ecc6fcd",
-        "type": "Image",
-        "selectableType": "STATE"
+      "c5429ab7-b107-4ee1-9f64-6f3acec66564": {
+        "id": "c5429ab7-b107-4ee1-9f64-6f3acec66564",
+        "type": "ZONE",
+        "selectableType": "ZONE",
+        "selectableData": null
       }
     },
-    "prevSelectionEntities": {},
+    "prevSelectionEntities": {
+      "c5429ab7-b107-4ee1-9f64-6f3acec66564": {
+        "id": "c5429ab7-b107-4ee1-9f64-6f3acec66564",
+        "type": "ZONE",
+        "selectableType": "ZONE",
+        "selectableData": null
+      }
+    },
     "isEventAdvancedEnabled": false,
     "activeAssetMenuTab": "ASSETS"
   },

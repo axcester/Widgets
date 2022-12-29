@@ -40,6 +40,10 @@
             justify-content: center;
             align-items: center;
         }
+
+        .white {
+            color: white;
+        }
         
     </style>
 
@@ -48,28 +52,37 @@
 <body>
     <div class="center">
         <div id="clock" class="clock">22:49:29</div>
-        <div id="date" class="date">OOOOOOOOOOOOOO, 20. OOOOOOOOOO</div>
+        <div id="date" class="date">Miðvikudagur, 30. september</div>
     </div>
 
     <script type="text/javascript">
-        var tday = ["Sunnudagur", "Mánudagur", "Þriðjudagur", "Miðvikudagur", "Fimmtudagur", "Föstudagur", "Laugardagur"];
-        var tmonth = ["janúar", "febrúar", "mars", "apríl", "maí", "júní", "júlí", "ágúst", "september", "október", "nóvember", "desember"];
-        var date = new Date();
+        const tday = ["Sunnudagur", "Mánudagur", "Þriðjudagur", "Miðvikudagur", "Fimmtudagur", "Föstudagur", "Laugardagur"];
+        const tmonth = ["janúar", "febrúar", "mars", "apríl", "maí", "júní", "júlí", "ágúst", "september", "október", "nóvember", "desember"];
 
-        function GetClock(d) {
+        const urlParams = new URLSearchParams(location.search);
+
+        if (urlParams.has("white")) {
+            document.getElementById('clock').classList.add("white");
+            document.getElementById('date').classList.add("white");
+        }
+
+        function GetClock() {
+            var d = new Date();
             var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate();
             var nhour = d.getHours(), nmin = d.getMinutes(), nsec = d.getSeconds();
             if (nmin <= 9) nmin = "0" + nmin;
             if (nsec <= 9) nsec = "0" + nsec;
 
-            var clocktext = nhour + ": " + nmin; // + ": " + nsec;
+            var clocktext = nhour + ":" + nmin;
+            if (urlParams.has("seconds"))
+                clocktext += ":" + nsec;
             var datetext = tday[nday] + ", " + ndate + ". " + tmonth[nmonth];
             document.getElementById('clock').innerHTML = clocktext;
             document.getElementById('date').innerHTML = datetext;
         }
 
-        GetClock(date);
-        setInterval(GetClock, 1000, date);
+        GetClock();
+        setInterval(GetClock, 1000);
     </script>
 </body>
 

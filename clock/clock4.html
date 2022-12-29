@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="is">
+
+<head>
+    <title>Klukka</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="3600">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&family=Open+Sans:wght@600&display=block">
+    <link blocking="render" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&family=Open+Sans:wght@600&display=block">
+
+    <style type="text/css">
+        
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0)
+        }
+
+        svg {
+            /* background-color: #1bbccb; */
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* width: 560px;
+            height: 250px; */
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            display: none;
+        }
+
+        .white {
+            fill: white;
+        }
+
+        .dateText {
+            font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+        }
+
+        .timeText {
+            font-family: "Open Sans", Arial, Helvetica, sans-serif;
+            font-size: 12rem;
+            font-weight: 600;
+        }
+ 
+    </style>
+
+</head>
+
+<body>
+    <svg viewbox="0 0 560 300">
+        <text id="time" x="50%" y="50%" dy="-35" class="timeText" text-anchor="middle" dominant-baseline="central"></text>
+        <text id="date" x="50%" y="50%" dy="80" class="dateText" text-anchor="middle" dominant-baseline="central"></text>
+    </svg>
+
+    <script type="text/javascript">
+
+        moment.locale("is");
+        const urlParams = new URLSearchParams(location.search);
+
+        var timeformat = "H:mm";
+        var dateformat = "dddd, D. MMMM";
+
+        var width = 560, height = 220;
+
+        if (urlParams.has("white")) {
+            $("#time").addClass("white");
+            $("#date").addClass("white");
+        }
+
+        if (urlParams.has("year")) {
+            dateformat = "dddd, D. MMMM YYYY";
+            width = 660;
+        }    
+        
+        if (urlParams.has("nodate")) {
+            $("#time").attr("dy", "0");
+            $("#date").hide();
+            height = 170;
+            width = 500;
+        }
+
+        if (urlParams.has("seconds")) {
+            timeformat = "H:mm:ss";
+            width = 780;
+        }
+        
+        if (urlParams.has("notime")) {
+            $("#date").attr("dy", "0");
+            $("#time").hide();
+            height = 60;
+        }
+        
+        setInterval(function() {
+            $("#time").text(moment().format(timeformat));
+            $("#date").text(moment().format(dateformat));
+        }, 1000);
+        
+        $(window).on("load", function (e) {
+            $("#time").text(moment().format(timeformat));
+            $("#date").text(moment().format(dateformat));
+            $("svg:hidden").attr("viewBox", `0 0 ${width} ${height}`);
+            $("svg:hidden").fadeIn(2000);
+        });
+
+    </script>
+</body>
+
+</html>
